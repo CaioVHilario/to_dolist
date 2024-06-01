@@ -24,25 +24,19 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 8,
         height: 64,
-        marginBottom: 20,
+        marginTop: 20,
         backgroundColor: "#262626",
         // width: '100%',
     },
-    addTask: {
-        height: 64,
-        borderRadius: 6,
-        backgroundColor: "#262626",
-        justifyContent: 'center',
-        alignItems: "center",
-    },
     addText: {
         fontSize: 14,
-        color: "#fff"
+        color: "#808080",
+        textDecorationLine: 'line-through'
     },
     task: {
         width: "70%",
     },
-    Unchecked: {
+    Checked: {
         // marginHorizontal: 12,
     }
 })

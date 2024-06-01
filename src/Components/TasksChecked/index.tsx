@@ -1,35 +1,32 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
-import { ImageCFHF } from "../../../assets";
+import { ImageCTHF } from "../../../assets";
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 type props = {
-    text: string;
-    // done: boolean;
+    task: string;
     onRemove: () => void;
-    onDone: () => void;
-    onChange: () => void;
+    doneTask: () => void;
 }
 
-export default function Tasks({text, onRemove, onDone, onChange}: props){
-
+export default function TasksChecked({task, onRemove, doneTask}: props){
     return(
         <View style={styles.newTask}>
             
-            <TouchableOpacity style={styles.checkedButon} onPress={onDone}>
-                <Image 
-                    style={styles.Unchecked}
-                    source={ImageCFHF}
+            <TouchableOpacity style={styles.checkedButon} onPress={doneTask}>
+                <Image
+                    style={styles.Checked}
+                    source={ImageCTHF}
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.task} onPress={onChange}>
+            <View style={styles.task}>
                 <Text style={styles.addText}> 
-                    {text} 
+                    {task} 
                 </Text>
-            </TouchableOpacity>
-            
+            </View>
+
             <TouchableOpacity style={styles.trashButon} onPress={onRemove}>
                 <Ionicons name="trash-outline" size={22} color="#3d3d3d" />
             </TouchableOpacity>
