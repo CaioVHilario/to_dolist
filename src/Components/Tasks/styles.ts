@@ -44,5 +44,10 @@ export const styles = StyleSheet.create({
     },
     Unchecked: {
         // marginHorizontal: 12,
+    },
+    addTextChecked: {
+        fontSize: 14,
+        color: "#808080",
+        textDecorationLine: 'line-through'
     }
 })

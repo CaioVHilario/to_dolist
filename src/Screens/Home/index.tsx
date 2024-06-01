@@ -32,7 +32,7 @@ export default function Home(){
             }
         ]));
         setNewTasks('')
-        
+
     }
 
     function handleRemoveTask(textID: string, text: string){
@@ -120,7 +120,7 @@ export default function Home(){
                     <Tasks
                         key={item.id}
                         text={item.text}
-                        // done={item}
+                        done={item.done}
                         onRemove={() => handleRemoveTask(item.id, item.text)}
                         onDone={() => handleDoneTask(item.id)}
                         onChange={() => handleChangeTask}
