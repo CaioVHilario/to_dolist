@@ -70,10 +70,14 @@ export const styles = StyleSheet.create({
         elevation: 2,
     },
     buttonClose: {
+        height: 45,
+        width: "50%",
+        justifyContent: 'center',
         backgroundColor: '#1e6f9f',
     },
     textStyle: {
         color: 'white',
+        fontSize: 16,
         fontWeight: 'bold',
         textAlign: 'center',
     },
@@ -109,7 +113,6 @@ export const styles = StyleSheet.create({
         width: '50%',
         fontWeight: "bold",
         color: "#808080",
-        textDecorationLine: 'line-through',
         textAlign: 'right'
     },
     taskRange: {

@@ -21,15 +21,15 @@ export default function Tasks({text, done, onRemove, onDone, onChange}: props){
 
     function handleModal(){
         setModalVisible(true)
-    }
+    };
 
     function handleFocus(){
         setFocused(!isFocused)
-     }
+     };
 
      function handleRangeDone(){
         setRange(100)
-     }
+     };
 
     return(
         <View style={[styles.newTask, {
@@ -62,12 +62,12 @@ export default function Tasks({text, done, onRemove, onDone, onChange}: props){
                             maximumTrackTintColor="#808080"
                             thumbTintColor="#1e6f9f"
                             value={range}
-                            onValueChange={value => setRange(parseInt(value))}
+                            onValueChange={value => setRange(Math.ceil(value))}
                         />
                         <TouchableOpacity
                         style={[styles.button, styles.buttonClose]}
                         onPress={() => {setModalVisible(!modalVisible); handleFocus()}}>
-                        <Text style={styles.textStyle}>Hide Modal</Text>
+                        <Text style={styles.textStyle}>Atualizar progresso</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
