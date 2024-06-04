@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "./styles";
-import { View, Text, Image, FlatList, TextInput, Alert, TouchableOpacity, Pressable } from "react-native";
+import { View, Text, Image, FlatList, TextInput, Alert, Pressable } from "react-native";
 import { ImageName } from "../../../assets";
 import Ionicons from '@expo/vector-icons/Ionicons'
 import Tasks from "../../Components/Tasks";
@@ -20,8 +20,6 @@ export default function Home(){
     const [done, setDone] = useState(0);
     const [nextID, setNextID] = useState(0);
     const [isFocused, setFocused] = useState(false);
-
-    // console.log('renderizou')
 
     function handleAddNewTask(){
         if(newTasks === '') {
@@ -69,12 +67,6 @@ export default function Home(){
     useEffect(() => {
         setDone(tasks.map(tasks => ({...tasks})).reduce((total, tasks) => total + tasks.feats, 0));
     }, [tasks])
-
-    function handleChangeTask(textID: string){
-        setTasks(prevState => prevState.map(tasks => 
-            tasks.id === textID ? {...tasks, done: !tasks.done} : tasks
-        ));
-    };
     
      function handleFocus(){
         setFocused(true)
@@ -110,7 +102,6 @@ export default function Home(){
                 />
 
                 <Pressable 
-                    // style={styles.addTask} 
                     onPress={handleAddNewTask}
                 
                 style={({pressed}) => [
@@ -160,7 +151,6 @@ export default function Home(){
                         done={item.done}
                         onRemove={() => handleRemoveTask(item.id, item.text)}
                         onDone={() => handleDoneTask(item.id, 0)}
-                        onChange={() => handleChangeTask}
                     />
                 )}
                 showsVerticalScrollIndicator={false}

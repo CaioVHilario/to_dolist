@@ -10,10 +10,9 @@ type props = {
     done: boolean;
     onRemove: () => void;
     onDone: () => void;
-    onChange: () => void;
 }
 
-export default function Tasks({text, done, onRemove, onDone, onChange}: props){
+export default function Tasks({text, done, onRemove, onDone}: props){
     const [modalVisible, setModalVisible] = useState(false);
     const [range, setRange] = useState(0);
     const [isFocused, setFocused] = useState(false);
@@ -50,9 +49,6 @@ export default function Tasks({text, done, onRemove, onDone, onChange}: props){
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Como está o andamento da sua tarefa?</Text>
-                        {/* <View style={styles.slider}>
-                            <Text style={styles.textSlider}> 100% </Text>
-                        </View> */}
                         <Text style={styles.modalText}>{range}%</Text>
                         <Slider 
                             style={styles.slider}
