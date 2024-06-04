@@ -8,13 +8,19 @@ export const styles = StyleSheet.create({
     },
     container: {
         height: 150,
-        width: 400,
+        width: "200%",
         alignSelf: "center",
         justifyContent: 'center',
         backgroundColor: '#0d0d0d',
     },
     logoTodo: {
         alignSelf: 'center',
+    },
+    tasks: {
+        alignItems: 'center',
+        marginTop: 20,
+        borderTopWidth: 1,
+        borderTopColor: "#808080"
     },
     infoTasks: {
         flexDirection: "row",
@@ -26,6 +32,14 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "bold"
     },
+    textNumber: {
+        color: "#fff",
+        fontWeight: "bold",
+    },
+    tasksAlignCreated: {
+        flexDirection: "row",
+        width: "50%"
+    },
     textFineshed: {
         color: "#8284FA",
         fontSize: 14,
@@ -36,23 +50,10 @@ export const styles = StyleSheet.create({
         borderRadius: 999,
         marginLeft: 8,
     },
-    textNumber: {
-        color: "#fff",
-        fontWeight: "bold",
-    },tasksAlignCreated: {
-        flexDirection: "row",
-        width: "50%"
-    },
     tasksAlignFineshed: {
         flexDirection: "row",
         justifyContent: "flex-end",
         width: "50%"
-    },
-    tasks: {
-        alignItems: 'center',
-        marginTop: 20,
-        borderTopWidth: 1,
-        borderTopColor: "#808080"
     },
     textNotTask: {
         fontWeight: "bold",
@@ -70,6 +71,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         borderRadius: 6,
         backgroundColor: "#292929",
+        borderWidth: 1,
         color: "#fff",
         padding: 16,
         marginRight: 8,
@@ -83,7 +85,6 @@ export const styles = StyleSheet.create({
         height: 54,
         width: 54,
         borderRadius: 6,
-        backgroundColor: "#1e6f9f",
         justifyContent: 'center',
         alignItems: "center",
     },
